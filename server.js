@@ -507,7 +507,6 @@ app.post('/insetCartOrder', async (req, res) => {
       req.body.order_valid,
     ]
   )
-
   await insertIntoDb(req.body.cartItems)
   async function insertIntoDb(cartItems) {
     for (const item of cartItems) {
