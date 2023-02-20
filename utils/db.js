@@ -7,9 +7,7 @@ let pool = mysql2.createPool({
   user: process.env.DB_USER,
   password: process.env.DB_PWD,
   database: process.env.DB_DATABASE,
-  dateStrings: true, //解決時間格式
-
-  // 限制 pool 連線數的上限
+  dateStrings: true,
   connectionLimit: 10,
 })
 
